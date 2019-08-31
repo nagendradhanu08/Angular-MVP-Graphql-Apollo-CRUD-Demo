@@ -1,0 +1,22 @@
+<form [formGroup]="form"> 
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" formControlName="title" aria-describedby="emailHelp"
+      placeholder="Enter Title">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputAuthor1">Author</label>
+    <input type="text" class="form-control" id="exampleInputAuthor1" placeholder="Enter Author"
+      formControlName="author">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputDescription1">Description</label>
+    <input type="text" class="form-control" id="exampleInputDescription1" aria-describedby="emailHelp"
+      formControlName="description" placeholder="Enter Description">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputTopic1">Topic</label>
+    <input type="text" class="form-control" id="exampleInputTopic1" placeholder="Enter Topic" formControlName="topic">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="submit()" [disabled]="form.invalid">Submit</button>
+</form>
